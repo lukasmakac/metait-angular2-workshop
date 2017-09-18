@@ -8,7 +8,7 @@ export class SpeakerNamesPipe implements PipeTransform {
 
   transform(session: Session): string {
     if (!session || !session.speakers) {
-      return ''
+      return '';
     }
 
     return session.speakers.map(speaker => speaker.name).join(', ');

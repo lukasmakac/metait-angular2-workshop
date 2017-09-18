@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
-import { SpeakerNamesPipe } from "./speaker-names.pipe";
-import { Session } from "./Session.ts";
+import { SpeakerNamesPipe } from './speaker-names.pipe';
+import { Session } from './Session';
 
 describe('Pipe: SpeakerNames', () => {
 
@@ -19,7 +19,7 @@ describe('Pipe: SpeakerNames', () => {
   });
 
   it('should return "" for null session.speakers', function(){
-    let session: Session = {
+    const session: Session = {
       id: 1,
       title: 'title',
       description: 'description',
@@ -30,7 +30,7 @@ describe('Pipe: SpeakerNames', () => {
   });
 
   it('should concatenate speaker names with comma', () => {
-    let session: Session = {
+    const session: Session = {
       id: 1,
       title: 'title',
       description: 'description',
