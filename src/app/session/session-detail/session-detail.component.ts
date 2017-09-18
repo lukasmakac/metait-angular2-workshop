@@ -23,6 +23,6 @@ export class SessionDetailComponent implements OnInit {
   }
 
   favoriteClickHandler(session: Session) {
-    console.log('SessionDetailComponent - favoriteClickHandler', session)
+    console.log('SessionDetailComponent - favoriteClickHandler', session);
   }
 }
