@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Speaker
+    </th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <!-- TODO načítejte data asynchronně-->
+
+  <tr *ngFor="let session of sessions">
+    <td>{{session.title}}</td>
+    <td>{{session|speakerNames}}</td>
+
+    <td class="is-icon">
+
+      <!--TODO oživte odkaz na detail-->
+      <a href="#">
+        <i class="fa fa-info"></i>
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>

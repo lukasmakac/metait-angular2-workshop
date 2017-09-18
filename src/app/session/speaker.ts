@@ -1,4 +1,4 @@
 export interface Speaker {
-  id?: number;
   name: string;
+  company: string;
 }

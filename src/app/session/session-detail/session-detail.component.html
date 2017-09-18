@@ -1,0 +1,8 @@
+<app-session-detail-card
+  *ngIf="session"
+  [session]="session"
+  (onFavoriteClick)="favoriteClickHandler($event)"></app-session-detail-card>
+
+<div class="back-link is-pulled-right">
+  <a href="#">Zpět</a>
+</div>
