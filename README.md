@@ -1,3 +1,5 @@
 ## Angular 2 workshop
 
-Návod na [Wiki](http://metaitangular2.wikidot.com/priprava)
+Tutorial on [Wiki here](http://metaitangular2.wikidot.com/priprava)
+
+Inspired by [Vita Plsek](https://www.linkedin.com/in/víťa-plšek-5487a98)
