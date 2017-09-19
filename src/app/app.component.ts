@@ -9,7 +9,7 @@ const sessions = require('../data/sessions-preview.json');
 })
 export class AppComponent {
 
-  sessionExample: Session = sessions[1];
+  sessionExample: Session = sessions[0];
 
   favoriteClickHandler(session: Session) {
     console.log('AppComponent - favoriteClickHandler', session);
