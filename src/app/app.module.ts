@@ -21,16 +21,13 @@ import { SessionDataService } from './session/session-data.service';
     SessionDetailComponent
   ],
 
-  // TODO přidejte závislost na routing modulu
-
   imports: [
     BrowserModule,
     HttpModule,
+    AppRoutingModule,
   ],
 
-  // TODO přidejte injektovatelnou službu
-
-  providers: [],
+  providers: [SessionDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

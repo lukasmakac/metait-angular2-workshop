@@ -7,9 +7,9 @@ import { Error404Component } from './error/error404/error404.component';
 @NgModule({
   imports: [
     RouterModule.forRoot([
-        // TODO přidávejte postupně nastavení routeru
-
         {path: '', component: SessionListComponent},
+        {path: 'session/:id', component: SessionDetailComponent},
+        {path: '**', component: Error404Component},
       ]
     )
   ],

@@ -12,14 +12,14 @@ const sessions = require('../../../data/sessions-preview.json');
 })
 export class SessionDetailComponent implements OnInit {
 
-  session: Session = sessions[1];
+  session: Session;
 
-  // TODO Injektněte potřebné služby
-  constructor() {
+  constructor(private sessionDataService: SessionDataService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    // TODO načtení dat podle id z routeru
+    const id = parseInt(this.route.snapshot.params['id']);
+    this.sessionDataService.getById(id).subscribe(session => { this.session = session; });
   }
 
   favoriteClickHandler(session: Session) {
