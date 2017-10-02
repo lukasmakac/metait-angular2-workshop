@@ -9,6 +9,7 @@ import { SessionListComponent } from './session/session-list/session-list.compon
 import { SessionDetailCardComponent } from './session/session-detail-card/session-detail-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SessionDataService } from './session/session-data.service';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SessionDataService } from './session/session-data.service';
     SessionDetailComponent
   ],
 
+  // TODO Přidejte modul pro reaktivní formuláře
   imports: [
     BrowserModule,
     HttpModule,

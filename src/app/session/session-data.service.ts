@@ -20,4 +20,13 @@ export class SessionDataService {
     return this.getList()
       .map(sessions => sessions.find(item => item.id === id));
   }
+
+  search(text: string): Observable<Session[]> {
+    console.log('SessionDataService - search: ', text);
+
+    const lowerCaseText = text.toLowerCase();
+
+    return this.getList()
+      .map(sessions => sessions.filter(item => item.title.toLowerCase().indexOf(lowerCaseText) !== -1));
+  }
 }

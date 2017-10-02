@@ -2,7 +2,18 @@
   <thead>
   <tr>
     <th>
-      Title
+      <p class="control has-icon">
+
+        <!-- TODO propojte input a control dohromady-->
+        <input class="input"
+               type="text"
+               placeholder="Title"
+        >
+
+        <span class="icon is-small">
+          <i class="fa fa-search"></i>
+        </span>
+      </p>
     </th>
     <th>
       Speaker
@@ -11,9 +22,6 @@
   </tr>
   </thead>
   <tbody>
-
-  <!-- TODO načítejte data asynchronně-->
-
   <tr *ngFor="let session of sessions | async">
     <td>{{ session.title }}</td>
     <td>{{ session | speakerNames }}</td>
