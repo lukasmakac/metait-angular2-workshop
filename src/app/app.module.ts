@@ -27,6 +27,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
 
   providers: [SessionDataService],

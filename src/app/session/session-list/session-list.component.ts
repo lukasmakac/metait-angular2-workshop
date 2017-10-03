@@ -13,16 +13,20 @@ const sessions = require('../../../data/sessions-preview.json');
 export class SessionListComponent implements OnInit {
 
   sessions: Observable<Session[]>;
+  searchNameInput = new FormControl();
 
   // TODO přidejte vlastnost searchNameInput
-
   constructor(private sessionDataService: SessionDataService) {
   }
 
   ngOnInit(): void {
 
     // TODO použijte operátory observables
-    this.sessions = this.sessionDataService.getList();
+    this.sessions = this.searchNameInput.valueChanges
+    .startWith('')
+    .debounceTime(200)
+    .distinctUntilChanged()
+    .flatMap(text => this.sessionDataService.search(text))
   }
 
 }
