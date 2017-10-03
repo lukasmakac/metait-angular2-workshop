@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card is-fullwidth">
+    <header class="card-header">
+      <p class="card-header-title">
+         {{ session.title }}
+      </p>
+      <a class="card-header-icon">
+
+        <!--TODO obslužte kliknutí na ikonu -->
+        <i (click)="onHeartClick()" class="fa fa-heart"></i>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">
+
+        <div class="tags">
+
+          <!--TODO zobrazte v cyklu všechny tagy session-->
+
+          <span *ngFor="let tag of session.tags" class="tag is-primary">
+            {{ tag }}
+          </span>
+        </div>
+
+        {{ session.description }}
+
+        Node.js makes building web applications that perform at scale easy - Google App Engine makes running Node.js
+        in production fun. In this session, we're going to learn about the various ways to run Node.js applications on
+        Google Cloud. We'll walk through deploying your first Hello World app and using the gcloud NPM module, we will
+        connect our app to other Google Cloud services such as Vision API (to classify images), Cloud Storage (for
+        binary storage), Pub/Sub (for messaging). We will look at versioning, traffic splitting, live debugging, HTTP
+        tracing and all other features that make running Node.js in the cloud fun! <br>
+
+        <!--TODO vypište jazyk a obtížnost-->
+        <small>English / Beginner</small>
+
+        <!--TODO použijte metodu komponenty-->
+        <div class="speakers">
+          <b>Přednáší:</b>
+          {{ getSpeakerNames() }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
