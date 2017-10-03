@@ -14,14 +14,14 @@
 
   <!-- TODO načítejte data asynchronně-->
 
-  <tr *ngFor="let session of sessions">
+  <tr *ngFor="let session of sessions | async">
     <td>{{ session.title }}</td>
     <td>{{ session | speakerNames }}</td>
 
     <td class="is-icon">
 
       <!--TODO oživte odkaz na detail-->
-      <a href="#">
+      <a [routerLink]="['/session', session.id]">
         <i class="fa fa-info"></i>
       </a>
     </td>

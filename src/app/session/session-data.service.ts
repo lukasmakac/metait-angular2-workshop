@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 const sessions = require('../../data/sessions.json');
 
 // TODO označte službu jako injektovatelnou
-
+@Injectable()
 export class SessionDataService {
 
   constructor() {

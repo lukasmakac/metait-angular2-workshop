@@ -11,10 +11,11 @@ const sessions = require('../../../data/sessions-preview.json');
 })
 export class SessionListComponent implements OnInit {
 
-  sessions: Session[] = sessions;
+  sessions: Observable<Session[]>;
 
   // TODO Injektněte potřebné služby
-  constructor() {
+  constructor(private sessionDataService: SessionDataService) {
+    this.sessions = sessionDataService.getList()
   }
 
   ngOnInit(): void {

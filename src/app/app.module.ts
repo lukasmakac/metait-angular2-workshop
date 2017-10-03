@@ -26,11 +26,12 @@ import { SessionDataService } from './session/session-data.service';
   imports: [
     BrowserModule,
     HttpModule,
+    AppRoutingModule
   ],
 
   // TODO přidejte injektovatelnou službu
 
-  providers: [],
+  providers: [SessionDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
